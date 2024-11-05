@@ -29,17 +29,18 @@ Include screenshots to showcase the app’s UI:
    ```bash
    git clone https://github.com/yourusername/flashcard-quiz-app.git
    cd flashcard-quiz-app
-    ``` 
+    
 
 2. **Install Dependencies**:
    ```bash
-  flutter pub get
-    ```
+   flutter pub get
+   ```
+   
 
 3. **Run the App**:
    ```bash
-  flutter run
-  ```
+   flutter run
+   ```
 
   ## Usage
 
