@@ -18,7 +18,7 @@ Include screenshots to showcase the app’s UI:
 
 | Screenshot 1 | Screenshot 2 | Screenshot 3 |
 |--------------|--------------|--------------|
- ![Screenshot1](./photo_2024-11-04_23-18-27%20(2).jpg) | ![Screenshot2](./photo_2024-11-04_23-18-27%20(3).jpg) |  ![Screenshot2](./photo_2024-11-04_23-18-27%20(3).jpg)
+ ![Screenshot1](./photo_2024-11-05_00-52-02(2).jpg) | ![Screenshot2](./photo_2024-11-04_23-18-27%20(3).jpg) |  ![Screenshot2](./photo_2024-11-04_23-18-27%20(3).jpg)
 
 
 ## Getting Started
