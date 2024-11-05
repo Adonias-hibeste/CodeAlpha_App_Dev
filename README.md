@@ -15,7 +15,11 @@ Include screenshots to showcase the app’s UI:
 2. **Add Flashcard Modal** - Popup to add a question and answer.
 3. **Delete Confirmation** - Popup confirming the deletion of a flashcard.
 
-*(Screenshots can be found in the repository images folder)*
+
+| Screenshot 1 | Screenshot 2 | Screenshot 3 |
+|--------------|--------------|--------------|
+ ![Screenshot1](./photo_2024-11-04_23-18-27%20(2).jpg) | ![Screenshot2](./photo_2024-11-04_23-18-27%20(3).jpg) |  ![Screenshot2](./photo_2024-11-04_23-18-27%20(3).jpg)
+
 
 ## Getting Started
 
