@@ -3,21 +3,33 @@ import 'package:flashcard_app/Flashcard_text.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
 
-class home extends StatefulWidget {
-  const home({super.key});
+class Home extends StatefulWidget {
+  const Home({super.key});
 
   @override
-  State<home> createState() => _homeState();
+  State<Home> createState() => _HomeState();
 }
 
-class _homeState extends State<home> {
+class _HomeState extends State<Home> {
   final List<Flashcard> _flashcards = [
-    Flashcard(question: 'this is question 1', answer: 'this is answer 1'),
-    Flashcard(question: 'this is question 2', answer: 'this is answer 2'),
-    Flashcard(question: 'this is question 3', answer: 'this is answer 3'),
-    Flashcard(question: 'this is question 4', answer: 'this is answer 4'),
-    Flashcard(question: 'this is question 5', answer: 'this is answer 5'),
-    Flashcard(question: 'this is question 6', answer: 'this is answer 6'),
+    Flashcard(
+        question: 'What is the difference between climate and weather?',
+        answer:
+            'Climate is long-term atmospheric conditions; weather is short-term.'),
+    Flashcard(
+        question: 'What is the central idea of "The Road Not Taken"',
+        answer: 'Choices and their impact on our future.'),
+    Flashcard(
+        question: 'What are the three branches of U.S. government?',
+        answer: 'Legislative, Executive, Judicial.'),
+    Flashcard(
+        question: 'What are the main themes of "1984"?',
+        answer:
+            'Totalitarianism, surveillance, manipulation of truth, and individual vs. collective identity.'),
+    Flashcard(
+        question: 'What do mitochondria do?',
+        answer:
+            'Produce ATP through cellular respiration and regulate metabolism.'),
   ];
   int _currindex = 0;
 
@@ -42,88 +54,89 @@ class _homeState extends State<home> {
             Text('FlashCard Quiz App', style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.green,
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [Colors.lightGreen[200]!, Colors.green[600]!],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+        ),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
                 width: 250,
                 height: 250,
                 child: FlipCard(
-                    front:
-                        Flashcard_text(text: _flashcards[_currindex].question),
-                    back:
-                        Flashcard_text(text: _flashcards[_currindex].answer))),
-            SizedBox(
-              width: 20,
-              height: 20,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                OutlinedButton.icon(
-                  onPressed: previousbutton,
-                  icon: Icon(
-                    Icons.chevron_left,
-                    color: Colors.white,
-                  ),
-                  label: Text(
-                    "Prev",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  style: OutlinedButton.styleFrom(
-                    backgroundColor: Colors.green, // Set the background color
-                  ),
+                  front: Flashcard_text(text: _flashcards[_currindex].question),
+                  back: Flashcard_text(text: _flashcards[_currindex].answer),
                 ),
-                OutlinedButton.icon(
-                  onPressed: nextbutton,
-                  icon: Icon(
-                    Icons.chevron_right,
-                    color: Colors.white,
+              ),
+              SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  ElevatedButton.icon(
+                    onPressed: previousbutton,
+                    icon: Icon(Icons.chevron_left, color: Colors.white),
+                    label: Text("Prev", style: TextStyle(color: Colors.white)),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.green[700],
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      padding: EdgeInsets.symmetric(horizontal: 20),
+                    ),
                   ),
-                  label: Text("Next", style: TextStyle(color: Colors.white)),
-                  style: OutlinedButton.styleFrom(
-                    backgroundColor: Colors.green, // Set the background color
+                  ElevatedButton.icon(
+                    onPressed: nextbutton,
+                    icon: Icon(Icons.chevron_right, color: Colors.white),
+                    label: Text("Next", style: TextStyle(color: Colors.white)),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.green[700],
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      padding: EdgeInsets.symmetric(horizontal: 20),
+                    ),
+                  )
+                ],
+              ),
+              SizedBox(height: 20),
+              ElevatedButton.icon(
+                onPressed: () {
+                  _showDialog(context);
+                },
+                icon: Icon(Icons.add, color: Colors.white),
+                label: Text("Add Flash-Cards",
+                    style: TextStyle(color: Colors.white)),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.green[700],
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
                   ),
-                )
-              ],
-            ),
-            SizedBox(
-              width: 20,
-              height: 20,
-            ),
-            OutlinedButton.icon(
-              onPressed: () {
-                _showDialog(context);
-              },
-              icon: Icon(
-                Icons.add,
-                color: Colors.white,
+                  padding: EdgeInsets.symmetric(horizontal: 20),
+                ),
               ),
-              label: Text("Add Flash-Cards",
-                  style: TextStyle(color: Colors.white)),
-              style: OutlinedButton.styleFrom(
-                backgroundColor: Colors.green, // Set the background color
+              SizedBox(height: 20),
+              ElevatedButton.icon(
+                onPressed: () {
+                  _showDialog2(context);
+                },
+                icon: Icon(Icons.delete, color: Colors.white),
+                label: Text("Delete", style: TextStyle(color: Colors.white)),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.red,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  padding: EdgeInsets.symmetric(horizontal: 20),
+                ),
               ),
-            ),
-            SizedBox(
-              width: 20,
-              height: 20,
-            ),
-            OutlinedButton.icon(
-              onPressed: () {
-                _showDialog2(context);
-              },
-              icon: Icon(
-                Icons.delete,
-                color: Colors.white,
-              ),
-              label: Text("Delete", style: TextStyle(color: Colors.white)),
-              style: OutlinedButton.styleFrom(
-                backgroundColor: Colors.red, // Set the background color
-              ),
-            )
-          ],
+            ],
+          ),
         ),
       ),
     );
@@ -146,13 +159,16 @@ class _homeState extends State<home> {
                 decoration: InputDecoration(
                   labelText: 'Question',
                   hintText: 'Enter the question',
+                  border: OutlineInputBorder(),
                 ),
               ),
+              SizedBox(height: 10),
               TextField(
                 controller: _controller2,
                 decoration: InputDecoration(
                   labelText: 'Answer',
                   hintText: 'Enter the answer',
+                  border: OutlineInputBorder(),
                 ),
               ),
             ],
@@ -187,9 +203,9 @@ class _homeState extends State<home> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text("Alert "),
+          title: Text("Alert"),
           content: Text(
-              'The current flashcard will be removed to continue click confirm and to stop click cancel'),
+              'The current flashcard will be removed. Click confirm to continue or cancel to stop.'),
           actions: <Widget>[
             TextButton(
               child: Text('Cancel'),
