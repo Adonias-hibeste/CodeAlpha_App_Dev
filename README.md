@@ -18,7 +18,7 @@ Include screenshots to showcase the app’s UI:
 
 | Screenshot 1 | Screenshot 2 | Screenshot 3 |
 |--------------|--------------|--------------|
- ![Screenshot1](https://github.com/Adonias-hibeste/Flash_Card_Quiz-app/blob/main/photo_2024-11-05_00-52-02%20(2).jpg) | ![Screenshot2](https://github.com/Adonias-hibeste/Flash_Card_Quiz-app/blob/main/photo_2024-11-05_00-52-02.jpg) |  ![Screenshot2](./photo_2024-11-04_23-18-27%20(3).jpg)
+ ![Screenshot1](https://github.com/Adonias-hibeste/Flash_Card_Quiz-app/blob/main/photo_2024-11-05_00-52-02%20(2).jpg) | ![Screenshot2](https://github.com/Adonias-hibeste/Flash_Card_Quiz-app/blob/main/photo_2024-11-05_00-52-02.jpg) |  ![Screenshot2](https://github.com/Adonias-hibeste/Flash_Card_Quiz-app/blob/main/photo_2024-11-05_00-52-28.jpg)
 
 
 ## Getting Started
